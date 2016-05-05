@@ -10,8 +10,6 @@ import UIKit
 //import Firebase
 
 class ViewController: UIViewController {
-    
-    //let ref = Firebase(url: "https://delivernow-monash4039.firebaseio.com")
 
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
@@ -29,9 +27,7 @@ class ViewController: UIViewController {
         if NSUserDefaults.standardUserDefaults().valueForKey("uid") != nil && CURRENT_USER.authData != nil {
             self.logoutButton.hidden = false
             
-            print(NSUserDefaults.standardUserDefaults().valueForKey("uid")!)
             let uid = NSUserDefaults.standardUserDefaults().valueForKey("uid") as! String
-            
             
             // Retrieve new posts as they are added to your database
             FIREBASE_REF.observeEventType(.ChildAdded, withBlock: { snapshot in
@@ -62,24 +58,53 @@ class ViewController: UIViewController {
                     print("Logged in succeessfully with the userID: \(authData.uid)")
                     self.logoutButton.hidden = false
                 } else {
-                    print(error)
+                    print(error.description)
+                    //Check if info in the TextFields can match with the info in Firebase.
+                    self.checkLoginInput(error.description)
                 }
             })
         } else {
-            let alert = UIAlertController(title: "Sorry", message: "Empty input cannot be accepted...", preferredStyle: .Alert)
-            let action = UIAlertAction(title: "Got it", style: .Default, handler: nil)
-            alert.addAction(action)
-            self.presentViewController(alert, animated: true, completion: nil)
+            self.ifIsEmpty()
         }
     }
     
-    
+    /*
+     Loguot current user and hide the logout button in the View.
+     */
     @IBAction func logoutAction(sender: UIButton) {
         CURRENT_USER.unauth()
         NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "uid")
         self.logoutButton.hidden = true
     }
     
+    /*
+     This method will let system popup differt alerts to remind users 
+     depending on "error code (returned by Firebase)".
+     */
+    func checkLoginInput(error: String) -> Void {
+        if error.rangeOfString("-5") != nil {
+            let alert = UIAlertController(title: "Sorry", message: "The specified email address is invalid...", preferredStyle: .Alert)
+            let action = UIAlertAction(title: "Got it", style: .Default, handler: nil)
+            alert.addAction(action)
+            self.presentViewController(alert, animated: true, completion: nil)
+        } else if error.rangeOfString("-6") != nil {
+            let alert = UIAlertController(title: "Sorry", message: "The specified password is incorrect...", preferredStyle: .Alert)
+            let action = UIAlertAction(title: "Got it", style: .Default, handler: nil)
+            alert.addAction(action)
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
+    
+    /*
+     Call this method if users don't finish fillig the blanks.
+     This method will let system popup an alert to reminder users.
+     */
+    func ifIsEmpty() -> Void {
+        let alert = UIAlertController(title: "Sorry", message: "Empty input cannot be accepted...", preferredStyle: .Alert)
+        let action = UIAlertAction(title: "Got it", style: .Default, handler: nil)
+        alert.addAction(action)
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
 }
 
 
