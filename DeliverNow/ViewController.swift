@@ -28,6 +28,15 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         if NSUserDefaults.standardUserDefaults().valueForKey("uid") != nil && CURRENT_USER.authData != nil {
             self.logoutButton.hidden = false
+            
+            print(NSUserDefaults.standardUserDefaults().valueForKey("uid")!)
+            let uid = NSUserDefaults.standardUserDefaults().valueForKey("uid") as! String
+            
+            
+            // Retrieve new posts as they are added to your database
+            FIREBASE_REF.observeEventType(.ChildAdded, withBlock: { snapshot in
+                print((snapshot.value.objectForKey(uid)?.objectForKey("info")?.objectForKey("name"))!)
+            })
         }
     }
     
@@ -43,15 +52,6 @@ class ViewController: UIViewController {
     }
 
     @IBAction func loginAction(sender: UIButton) {
-//        ref.authUser(emailTextField.text!, password: passwordTextField.text!, withCompletionBlock: { error, authData in
-//            if error != nil {
-//                print(error)
-//            } else {
-//                let uid = authData.uid
-//                print("Login successfully with the uid: \(uid!)")
-//            }
-//        })
-        
         let email = self.emailTextField.text
         let password = self.passwordTextField.text
         

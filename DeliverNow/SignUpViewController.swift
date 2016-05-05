@@ -61,9 +61,6 @@ class SignUpViewController: UIViewController {
                             FIREBASE_REF.childByAppendingPath("users/\(uid!)/info").setValue(userInfo)
                             
                             print("Account registered successfully with the userID: \(uid!)")
-                            
-                            
-                            
                         } else {
                             print(error)
                         }
