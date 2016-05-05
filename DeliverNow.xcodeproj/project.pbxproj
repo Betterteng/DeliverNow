@@ -14,6 +14,9 @@
 		404769331CD98BD600E324CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 404769311CD98BD600E324CF /* LaunchScreen.storyboard */; };
 		4047693E1CD98BD600E324CF /* DeliverNowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4047693D1CD98BD600E324CF /* DeliverNowTests.swift */; };
 		404769491CD98BD600E324CF /* DeliverNowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404769481CD98BD600E324CF /* DeliverNowUITests.swift */; };
+		404769571CD99C0800E324CF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404769561CD99C0800E324CF /* SignUpViewController.swift */; };
+		408581CD1CDB1841006E8D55 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408581CC1CDB1841006E8D55 /* BaseService.swift */; };
+		FAC35B8BEE49575B382B779F /* Pods_DeliverNow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBB0B47BD3582EE30949C922 /* Pods_DeliverNow.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02E622487D1F61C9FCB86189 /* Pods-DeliverNow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeliverNow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeliverNow/Pods-DeliverNow.debug.xcconfig"; sourceTree = "<group>"; };
 		404769251CD98BD600E324CF /* DeliverNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeliverNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		404769281CD98BD600E324CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4047692A1CD98BD600E324CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +51,10 @@
 		404769441CD98BD600E324CF /* DeliverNowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeliverNowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		404769481CD98BD600E324CF /* DeliverNowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliverNowUITests.swift; sourceTree = "<group>"; };
 		4047694A1CD98BD600E324CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		404769561CD99C0800E324CF /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		408581CC1CDB1841006E8D55 /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		71944623CFED3C0E61D1852F /* Pods-DeliverNow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeliverNow.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeliverNow/Pods-DeliverNow.release.xcconfig"; sourceTree = "<group>"; };
+		FBB0B47BD3582EE30949C922 /* Pods_DeliverNow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeliverNow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAC35B8BEE49575B382B779F /* Pods_DeliverNow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +90,8 @@
 				4047693C1CD98BD600E324CF /* DeliverNowTests */,
 				404769471CD98BD600E324CF /* DeliverNowUITests */,
 				404769261CD98BD600E324CF /* Products */,
+				8562164F3AFDB29C4422AC94 /* Pods */,
+				ADA8EE60E6246BB2BA02F993 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +114,8 @@
 				4047692F1CD98BD600E324CF /* Assets.xcassets */,
 				404769311CD98BD600E324CF /* LaunchScreen.storyboard */,
 				404769341CD98BD600E324CF /* Info.plist */,
+				404769561CD99C0800E324CF /* SignUpViewController.swift */,
+				408581CC1CDB1841006E8D55 /* BaseService.swift */,
 			);
 			path = DeliverNow;
 			sourceTree = "<group>";
@@ -125,6 +138,23 @@
 			path = DeliverNowUITests;
 			sourceTree = "<group>";
 		};
+		8562164F3AFDB29C4422AC94 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				02E622487D1F61C9FCB86189 /* Pods-DeliverNow.debug.xcconfig */,
+				71944623CFED3C0E61D1852F /* Pods-DeliverNow.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		ADA8EE60E6246BB2BA02F993 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FBB0B47BD3582EE30949C922 /* Pods_DeliverNow.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +162,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4047694D1CD98BD600E324CF /* Build configuration list for PBXNativeTarget "DeliverNow" */;
 			buildPhases = (
+				59A75F3A969E6E3D0CE9EAB5 /* Check Pods Manifest.lock */,
 				404769211CD98BD600E324CF /* Sources */,
 				404769221CD98BD600E324CF /* Frameworks */,
 				404769231CD98BD600E324CF /* Resources */,
+				B9BF47A7A54DC3AF717271C7 /* Embed Pods Frameworks */,
+				CAEC61825A766BBAC59BBF50 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -251,11 +284,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		59A75F3A969E6E3D0CE9EAB5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B9BF47A7A54DC3AF717271C7 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DeliverNow/Pods-DeliverNow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CAEC61825A766BBAC59BBF50 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DeliverNow/Pods-DeliverNow-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		404769211CD98BD600E324CF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				408581CD1CDB1841006E8D55 /* BaseService.swift in Sources */,
+				404769571CD99C0800E324CF /* SignUpViewController.swift in Sources */,
 				4047692B1CD98BD600E324CF /* ViewController.swift in Sources */,
 				404769291CD98BD600E324CF /* AppDelegate.swift in Sources */,
 			);
@@ -397,6 +480,7 @@
 		};
 		4047694E1CD98BD600E324CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02E622487D1F61C9FCB86189 /* Pods-DeliverNow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DeliverNow/Info.plist;
@@ -408,6 +492,7 @@
 		};
 		4047694F1CD98BD600E324CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71944623CFED3C0E61D1852F /* Pods-DeliverNow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DeliverNow/Info.plist;
@@ -482,6 +567,7 @@
 				4047694F1CD98BD600E324CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		404769501CD98BD600E324CF /* Build configuration list for PBXNativeTarget "DeliverNowTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +576,7 @@
 				404769521CD98BD600E324CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		404769531CD98BD600E324CF /* Build configuration list for PBXNativeTarget "DeliverNowUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +585,7 @@
 				404769551CD98BD600E324CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
