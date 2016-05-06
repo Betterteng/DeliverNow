@@ -15,6 +15,7 @@
 		4047693E1CD98BD600E324CF /* DeliverNowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4047693D1CD98BD600E324CF /* DeliverNowTests.swift */; };
 		404769491CD98BD600E324CF /* DeliverNowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404769481CD98BD600E324CF /* DeliverNowUITests.swift */; };
 		404769571CD99C0800E324CF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404769561CD99C0800E324CF /* SignUpViewController.swift */; };
+		407166CC1CDC4A3F0098B17C /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407166CB1CDC4A3F0098B17C /* ChoiceViewController.swift */; };
 		408581CD1CDB1841006E8D55 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408581CC1CDB1841006E8D55 /* BaseService.swift */; };
 		FAC35B8BEE49575B382B779F /* Pods_DeliverNow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBB0B47BD3582EE30949C922 /* Pods_DeliverNow.framework */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,7 @@
 		404769481CD98BD600E324CF /* DeliverNowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliverNowUITests.swift; sourceTree = "<group>"; };
 		4047694A1CD98BD600E324CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		404769561CD99C0800E324CF /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		407166CB1CDC4A3F0098B17C /* ChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
 		408581CC1CDB1841006E8D55 /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		71944623CFED3C0E61D1852F /* Pods-DeliverNow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeliverNow.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeliverNow/Pods-DeliverNow.release.xcconfig"; sourceTree = "<group>"; };
 		FBB0B47BD3582EE30949C922 /* Pods_DeliverNow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeliverNow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +118,7 @@
 				404769341CD98BD600E324CF /* Info.plist */,
 				404769561CD99C0800E324CF /* SignUpViewController.swift */,
 				408581CC1CDB1841006E8D55 /* BaseService.swift */,
+				407166CB1CDC4A3F0098B17C /* ChoiceViewController.swift */,
 			);
 			path = DeliverNow;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 			files = (
 				408581CD1CDB1841006E8D55 /* BaseService.swift in Sources */,
 				404769571CD99C0800E324CF /* SignUpViewController.swift in Sources */,
+				407166CC1CDC4A3F0098B17C /* ChoiceViewController.swift in Sources */,
 				4047692B1CD98BD600E324CF /* ViewController.swift in Sources */,
 				404769291CD98BD600E324CF /* AppDelegate.swift in Sources */,
 			);
